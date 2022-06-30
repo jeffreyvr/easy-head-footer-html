@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffreyvr/wp-settings.git",
-                "reference": "bbd5ae87eaee4a8cb1ccdee6ea49a3cb19b81395"
+                "reference": "ff6358c935c059cd2b948c32c109e5f5515feedb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffreyvr/wp-settings/zipball/bbd5ae87eaee4a8cb1ccdee6ea49a3cb19b81395",
-                "reference": "bbd5ae87eaee4a8cb1ccdee6ea49a3cb19b81395",
+                "url": "https://api.github.com/repos/jeffreyvr/wp-settings/zipball/ff6358c935c059cd2b948c32c109e5f5515feedb",
+                "reference": "ff6358c935c059cd2b948c32c109e5f5515feedb",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +57,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-06-30T13:04:15+00:00"
+            "time": "2022-06-30T13:12:10+00:00"
         }
     ],
     "packages-dev": [

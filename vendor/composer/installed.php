@@ -5,7 +5,7 @@
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'cf09c6a5b888af6b85691b3c1330109a1079ed5b',
+        'reference' => '252a1d3da55e9633b2068260a9e1eb79936e0fa5',
         'name' => 'jeffreyvanrossum/easy-head-footer-html',
         'dev' => true,
     ),
@@ -27,7 +27,7 @@
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'cf09c6a5b888af6b85691b3c1330109a1079ed5b',
+            'reference' => '252a1d3da55e9633b2068260a9e1eb79936e0fa5',
             'dev_requirement' => false,
         ),
         'jeffreyvanrossum/wp-settings' => array(
@@ -38,7 +38,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => 'bbd5ae87eaee4a8cb1ccdee6ea49a3cb19b81395',
+            'reference' => 'ff6358c935c059cd2b948c32c109e5f5515feedb',
             'dev_requirement' => false,
         ),
     ),
