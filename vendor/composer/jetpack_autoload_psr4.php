@@ -11,7 +11,7 @@ return array(
 		'path'    => array( $vendorDir . '/jeffreyvanrossum/wp-settings/src' )
 	),
 	'EasyHeadFooterHtml\\' => array(
-		'version' => '1.0.0.0',
+		'version' => 'dev-main',
 		'path'    => array( $baseDir . '/src' )
 	),
 	'Automattic\\Jetpack\\Autoloader\\' => array(

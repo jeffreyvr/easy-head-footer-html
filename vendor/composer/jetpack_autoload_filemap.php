@@ -11,7 +11,7 @@ return array(
 		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/helpers.php'
 	),
 	'1af110379240a8e60238d8a75cb7cce2' => array(
-		'version' => '1.0.0.0',
+		'version' => 'dev-main',
 		'path'    => $baseDir . '/src/helpers.php'
 	),
 );
