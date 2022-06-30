@@ -1,0 +1,119 @@
+{
+    "packages": [
+        {
+            "name": "automattic/jetpack-autoloader",
+            "version": "dev-trunk",
+            "version_normalized": "dev-trunk",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Automattic/jetpack-autoloader.git",
+                "reference": "a22f41ff845b8bd4591a933b282270f57dd5bc1d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Automattic/jetpack-autoloader/zipball/a22f41ff845b8bd4591a933b282270f57dd5bc1d",
+                "reference": "a22f41ff845b8bd4591a933b282270f57dd5bc1d",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1 || ^2.0"
+            },
+            "require-dev": {
+                "automattic/jetpack-changelogger": "^3.1",
+                "yoast/phpunit-polyfills": "1.0.3"
+            },
+            "time": "2022-06-21T07:32:07+00:00",
+            "default-branch": true,
+            "type": "composer-plugin",
+            "extra": {
+                "autotagger": true,
+                "class": "Automattic\\Jetpack\\Autoloader\\CustomAutoloaderPlugin",
+                "mirror-repo": "Automattic/jetpack-autoloader",
+                "changelogger": {
+                    "link-template": "https://github.com/Automattic/jetpack-autoloader/compare/v${old}...v${new}"
+                },
+                "branch-alias": {
+                    "dev-trunk": "2.11.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Automattic\\Jetpack\\Autoloader\\": "src"
+                },
+                "classmap": [
+                    "src/AutoloadGenerator.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Creates a custom autoloader for a plugin or theme.",
+            "support": {
+                "source": "https://github.com/Automattic/jetpack-autoloader/tree/v2.11.6"
+            },
+            "install-path": "../automattic/jetpack-autoloader"
+        },
+        {
+            "name": "jeffreyvanrossum/wp-settings",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jeffreyvr/wp-settings.git",
+                "reference": "d3418191a23d73b6b9702f8ae12d183dc612961c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jeffreyvr/wp-settings/zipball/d3418191a23d73b6b9702f8ae12d183dc612961c",
+                "reference": "d3418191a23d73b6b9702f8ae12d183dc612961c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "phpcompatibility/php-compatibility": "*"
+            },
+            "time": "2022-05-20T09:58:14+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Jeffreyvr\\WPSettings\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey van Rossum",
+                    "email": "jeffrey@vanrossum.dev"
+                }
+            ],
+            "description": "Handy wrapper to make creating WordPress settings pages a breeze.",
+            "support": {
+                "issues": "https://github.com/jeffreyvr/wp-settings/issues",
+                "source": "https://github.com/jeffreyvr/wp-settings/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://vanrossum.dev/donate",
+                    "type": "custom"
+                }
+            ],
+            "install-path": "../jeffreyvanrossum/wp-settings"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": [
+        "automattic/jetpack-autoloader"
+    ]
+}

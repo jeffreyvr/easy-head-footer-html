@@ -1,0 +1,25 @@
+{
+    "name": "jeffreyvanrossum/easy-head-footer-html",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "autoload": {
+      "files": [
+        "src/helpers.php"
+      ],
+      "psr-4": {
+        "EasyHeadFooterHtml\\": "src/"
+      }
+    },
+    "require-dev": {
+      "automattic/jetpack-autoloader": "^2"
+    },
+    "require": {
+      "jeffreyvanrossum/wp-settings": "dev-master"
+    },
+    "config": {
+      "allow-plugins": {
+        "automattic/jetpack-autoloader": true
+      }
+    }
+  }
