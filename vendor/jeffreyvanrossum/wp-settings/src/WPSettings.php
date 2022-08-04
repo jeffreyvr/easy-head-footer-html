@@ -92,9 +92,9 @@ class WPSettings
         $this->errors = new Error($this);
         $this->flash = new Flash($this);
 
-        add_action('admin_init', [$this, 'save']);
-        add_action('admin_menu', [$this, 'add_to_menu']);
-        add_action('admin_head', [$this, 'styling']);
+        add_action('admin_init', [$this, 'save'], 20);
+        add_action('admin_menu', [$this, 'add_to_menu'], 20);
+        add_action('admin_head', [$this, 'styling'], 20);
     }
 
     public function is_on_settings_page()
@@ -190,7 +190,7 @@ class WPSettings
 
     public function get_url()
     {
-        if ($this->parent_slug) {
+        if (strpos($this->parent_slug, '.php') !== false && $this->parent_slug) {
             return \add_query_arg('page', $this->slug, \admin_url($this->parent_slug));
         }
 
@@ -228,7 +228,11 @@ class WPSettings
 
     public function render()
     {
+        do_action('wp_settings_before_render_settings_page');
+
         view('settings-page', ['settings' => $this]);
+
+        do_action('wp_settings_after_render_settings_page');
     }
 
     public function get_options()
@@ -252,7 +256,7 @@ class WPSettings
 
     public function save()
     {
-        if (! isset($_POST['wp_settings_trigger'])) {
+        if (! isset($_POST['wp_settings_save']) || ! wp_verify_nonce($_POST['wp_settings_save'], 'wp_settings_save_' . $this->option_name)) {
             return;
         }
 
@@ -260,32 +264,34 @@ class WPSettings
             wp_die(__('What do you think you are doing?'));
         }
 
-        if (! isset($_POST[$this->option_name]) && !isset($_POST['wp_settings_submitted'])) {
-            return;
-        }
-
         $current_options = $this->get_options();
-        $new_options = apply_filters('wp_settings_new_options', $_POST[$this->option_name] ?? [], $current_options);
+        $submitted_options = apply_filters('wp_settings_new_options', $_POST[$this->option_name] ?? [], $current_options);
+        $new_options = $current_options;
 
-        foreach ($new_options as $option => $value) {
-            $_option = $this->find_option($option);
+        foreach ($this->get_active_tab()->get_active_sections() as $section) {
+            foreach ($section->options as $option) {
+                $value = $submitted_options[$option->implementation->get_name()] ?? null;
 
-            $valid = $_option->validate($value);
+                $valid = $option->implementation->validate($value);
 
-            if (!$valid) {
-                continue;
+                if (!$valid) {
+                    continue;
+                }
+
+                $value = apply_filters("wp_settings_new_options_".$option->implementation->get_name(), $option->implementation->sanitize($value), $option->implementation);
+
+                $new_options[$option->implementation->get_name()] = $value;
             }
-
-            $current_options[$option] = apply_filters("wp_settings_new_options_$option", $_option->sanitize($value), $_option);
         }
 
-        $current_options = $this->maybe_unset_options($current_options, $new_options);
-
-        update_option($this->option_name, $current_options);
+        update_option($this->option_name, $new_options);
 
         $this->flash->set('success', __('Saved changes!'));
     }
 
+    /**
+     * @deprecated
+     */
     public function maybe_unset_options($current_options, $new_options)
     {
         if (! isset($_REQUEST['wp_settings_submitted'])) {

@@ -40,7 +40,15 @@ abstract class OptionAbstract
 
     public function get_arg($key, $fallback = null)
     {
-        return $this->args[$key] ?? $fallback;
+        if(empty($this->args[$key])) {
+            return $fallback;
+        }
+
+        if(\is_callable($this->args[$key])) {
+            return $this->args[$key]();
+        }
+
+        return $this->args[$key];
     }
 
     public function get_label()

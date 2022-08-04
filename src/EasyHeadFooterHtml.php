@@ -10,7 +10,7 @@ class EasyHeadFooterHtml
 
     public static function instance()
     {
-        if (! isset(self::$instance) && ! (self::$instance instanceof RepublishPosts)) {
+        if (! isset(self::$instance) && ! (self::$instance instanceof EasyHeadFooterHtml)) {
             self::$instance = new EasyHeadFooterHtml();
 
             add_action('plugins_loaded', [self::$instance, 'loadTextDomain']);

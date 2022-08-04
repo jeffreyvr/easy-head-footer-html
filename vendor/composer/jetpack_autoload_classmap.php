@@ -6,8 +6,92 @@ $vendorDir = dirname(__DIR__);
 $baseDir   = dirname($vendorDir);
 
 return array(
+	'Jeffreyvr\\WPSettings\\Options\\SelectMultiple' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Options/SelectMultiple.php'
+	),
+	'Jeffreyvr\\WPSettings\\Options\\OptionAbstract' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Options/OptionAbstract.php'
+	),
+	'Jeffreyvr\\WPSettings\\Options\\WPEditor' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Options/WPEditor.php'
+	),
+	'Jeffreyvr\\WPSettings\\Options\\Choices' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Options/Choices.php'
+	),
+	'Jeffreyvr\\WPSettings\\Options\\Textarea' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Options/Textarea.php'
+	),
+	'Jeffreyvr\\WPSettings\\Options\\Select' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Options/Select.php'
+	),
+	'Jeffreyvr\\WPSettings\\Options\\Checkbox' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Options/Checkbox.php'
+	),
+	'Jeffreyvr\\WPSettings\\Options\\CodeEditor' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Options/CodeEditor.php'
+	),
+	'Jeffreyvr\\WPSettings\\Options\\Text' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Options/Text.php'
+	),
+	'Jeffreyvr\\WPSettings\\Flash' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Flash.php'
+	),
+	'Jeffreyvr\\WPSettings\\Option' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Option.php'
+	),
+	'Jeffreyvr\\WPSettings\\Tab' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Tab.php'
+	),
+	'Jeffreyvr\\WPSettings\\Section' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Section.php'
+	),
+	'Jeffreyvr\\WPSettings\\Error' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/Error.php'
+	),
+	'Jeffreyvr\\WPSettings\\WPSettings' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/jeffreyvanrossum/wp-settings/src/WPSettings.php'
+	),
+	'EasyHeadFooterHtml\\Admin\\Settings' => array(
+		'version' => 'dev-main',
+		'path'    => $baseDir . '/src/Admin/Settings.php'
+	),
+	'EasyHeadFooterHtml\\EasyHeadFooterHtml' => array(
+		'version' => 'dev-main',
+		'path'    => $baseDir . '/src/EasyHeadFooterHtml.php'
+	),
 	'Automattic\\Jetpack\\Autoloader\\AutoloadGenerator' => array(
 		'version' => 'dev-trunk',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadGenerator.php'
+	),
+	'Automattic\\Jetpack\\Autoloader\\AutoloadProcessor' => array(
+		'version' => 'dev-trunk',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadProcessor.php'
+	),
+	'Automattic\\Jetpack\\Autoloader\\AutoloadFileWriter' => array(
+		'version' => 'dev-trunk',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadFileWriter.php'
+	),
+	'Automattic\\Jetpack\\Autoloader\\CustomAutoloaderPlugin' => array(
+		'version' => 'dev-trunk',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/CustomAutoloaderPlugin.php'
+	),
+	'Automattic\\Jetpack\\Autoloader\\ManifestGenerator' => array(
+		'version' => 'dev-trunk',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/ManifestGenerator.php'
 	),
 );

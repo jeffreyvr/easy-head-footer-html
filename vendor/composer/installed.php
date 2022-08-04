@@ -5,7 +5,7 @@
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '252a1d3da55e9633b2068260a9e1eb79936e0fa5',
+        'reference' => '859d97f83e201b26d545ae7a33c040dd50e18d1d',
         'name' => 'jeffreyvanrossum/easy-head-footer-html',
         'dev' => true,
     ),
@@ -18,7 +18,7 @@
             'aliases' => array(
                 0 => '2.11.x-dev',
             ),
-            'reference' => 'a22f41ff845b8bd4591a933b282270f57dd5bc1d',
+            'reference' => '65170ab358aa5a8efd9de96666a46b74dc74513d',
             'dev_requirement' => true,
         ),
         'jeffreyvanrossum/easy-head-footer-html' => array(
@@ -27,7 +27,7 @@
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '252a1d3da55e9633b2068260a9e1eb79936e0fa5',
+            'reference' => '859d97f83e201b26d545ae7a33c040dd50e18d1d',
             'dev_requirement' => false,
         ),
         'jeffreyvanrossum/wp-settings' => array(
@@ -38,7 +38,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => 'ff6358c935c059cd2b948c32c109e5f5515feedb',
+            'reference' => '90e615f3d19d016eb641e936799788522307ffe0',
             'dev_requirement' => false,
         ),
     ),

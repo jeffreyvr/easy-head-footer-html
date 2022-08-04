@@ -8,12 +8,13 @@ class Settings
 {
     public function __construct()
     {
-        add_action('init', [$this, 'register']);
+        add_action('admin_menu', [$this, 'register'], 10);
     }
 
     public function register()
     {
-        $settings = (new WPSettings(__('Easy Head Footer HTML')));
+        $settings = (new WPSettings(__('Easy Head Footer HTML')))
+            ->set_menu_parent_slug('options-general.php');
 
         $settings->add_section(__('General', 'republish-posts'));
 
